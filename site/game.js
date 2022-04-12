@@ -6,12 +6,17 @@ window.onload = function() {
 
 
 function gameNumber() {
-    // TODO
-    return 7;
+    const day0 = new Date("04/11/2022");
+    let today = new Date();
+    today.setHours(0)
+    today.setMinutes(0)
+    today.setSeconds(0)
+    today.setMilliseconds(0)
+    const difference = today.getTime() - day0.getTime();
+    return Math.round(difference);
 }
 
 function gameText() {
-    // TODO
     return `Zerodle ${gameNumber()} 0/6\n\nzerodle.com\n#zerodle`;
 }
 
