@@ -13,7 +13,8 @@ function gameNumber() {
     today.setSeconds(0)
     today.setMilliseconds(0)
     const difference = today.getTime() - day0.getTime();
-    return Math.round(difference);
+    const days = difference / (24 * 60 * 60 * 1000);
+    return Math.round(days);
 }
 
 function gameText() {
