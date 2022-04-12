@@ -12,7 +12,7 @@ function gameNumber() {
 
 function gameText() {
     // TODO
-    return "my game game!";
+    return `Zerodle ${gameNumber()} 0/6\n\nzerodle.com\n#zerodle`;
 }
 
 function shareGame() {
