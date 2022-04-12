@@ -7,7 +7,7 @@ body {
 
 h1 {
     font-size: 5rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
@@ -47,7 +47,8 @@ h1 > a {
 }
 
 .share-button-wrapper {
-    margin: 3rem 0;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
 }
 
 .share-button:active {
@@ -63,7 +64,7 @@ h1 > a {
     color: #34f769;
     font-size: 20pt;
     display: block;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .br-sticky {
