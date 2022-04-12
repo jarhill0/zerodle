@@ -23,15 +23,36 @@ h1 > a {
     font-size: 16pt;
 }
 
-.play-button {
+.button {
     font-size: 20pt;
     text-align: center;
     display: block;
-    padding: 1rem 3rem;
     outline: 2px solid white;
+    text-decoration: none;
+}
+
+.play-button {
+    padding: 1rem 3rem;
     width: 17rem;
     margin: 0 auto;
-    text-decoration: none;
     color: white;
     background-color: coral;
+}
+
+.share-button {
+    padding: 1rem 3rem;
+    width: 20rem;
+    margin: 1rem auto;
+    color: white;
+    background-color: darkgreen;
+    border: none;
+}
+
+.share-button:active {
+    position: relative;
+    top: 2px;
+}
+
+.hidden {
+    display: none;
 }
