@@ -12,3 +12,7 @@ jobs:
       - run: whoami
       - run: rclone --version
       - run: ./ci-upload.sh
+        env:
+          USER: ${{ secrets.USER }}
+          PASS: ${{ secrets.PASS }}
+          RCD: ${{ secrets.RCD }}
