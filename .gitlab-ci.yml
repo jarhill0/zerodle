@@ -1,9 +1,0 @@
-image: jarhill0/rclone
-
-push-site:
-  script:
-    - whoami
-    - rclone --version
-    - ./ci-upload.sh
-  only:
-    - main
