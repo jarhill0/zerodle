@@ -4,7 +4,7 @@ on:
     branches: [main]
 jobs:
   Push-Site:
-    runs-on: jarhill0/rclone
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
