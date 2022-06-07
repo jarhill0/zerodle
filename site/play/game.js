@@ -4,6 +4,7 @@ window.onload = function() {
     }
 };
 
+const COMPLETED_AT_TIME = new Date();
 
 function gameNumber() {
     const day0 = new Date("04/11/2022");
@@ -17,8 +18,42 @@ function gameNumber() {
     return Math.round(days);
 }
 
+
+const WATCH = String.fromCodePoint(0x23F1, 0xFE0F);
+
+function gameTime() {
+    const loadTimeCookie = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('loadtime='));
+    if (loadTimeCookie === undefined) {
+        return '';
+    }
+
+    const loadTime = new Date(loadTimeCookie.split('=')[1]);
+    const puzzleTimeMillis = COMPLETED_AT_TIME - loadTime;
+
+    return `\n${WATCH} ` + friendlyTime(puzzleTimeMillis);
+}
+
+
+function friendlyTime(millis) {
+    const totalSeconds = Math.ceil(millis / 1000);
+
+    const seconds = totalSeconds % 60;
+    const minutes = Math.floor(totalSeconds / 60) % 60;
+    const hours = Math.floor(totalSeconds / (60 * 60)) % (60 * 60);
+
+    return `${zeroPad(hours)}:${zeroPad(minutes)}:${zeroPad(seconds)}`;
+}
+
+
+function zeroPad(n) {
+    return n.toString().padStart(2, '0');
+}
+
+
 function gameText() {
-    return `Zerodle ${gameNumber()} 0/6\n\nzerodle.com\n#zerodle`;
+    return `Zerodle ${gameNumber()} 0/6${gameTime()}\n\nzerodle.com\n#zerodle`;
 }
 
 function shareGame() {
