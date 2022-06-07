@@ -31,7 +31,7 @@ h1 > a {
 
 .play-button {
     padding: 1rem 3rem;
-    width: 17rem;
+    max-width: 17rem;
     margin: 0 auto;
     color: white;
     background-color: coral;
