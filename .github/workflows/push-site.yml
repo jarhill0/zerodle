@@ -9,5 +9,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: whoami
+        uses: docker://jarhill0/rclone
       - run: rclone --version
+        uses: docker://jarhill0/rclone
       - run: ./ci-upload.sh
+        uses: docker://jarhill0/rclone
